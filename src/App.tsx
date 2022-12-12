@@ -25,20 +25,27 @@ const List = () => {
 type TitleProps = {
     title: string
     text?: string
+    num?: number
 }
 
 // React Component
-const Title = (props: TitleProps) => (
-    <h1>
-        {props.text} {props.title}
-    </h1>
-)
+const Title = (props: TitleProps) => {
+    console.log(props)
+    return (
+        <>
+            <h1>
+                {props.text} {props.title}
+            </h1>
+            <p>{props.num}</p>
+        </>
+    )
+}
 
 function App() {
     return (
         <div className="App">
-            <Title title="App.js" />
-            <Title title="Test.js" />
+            <Title text="Hello" title="App.js" num={10} />
+            <Title text="Hello" title="Test.js" num={15} />
             <List />
         </div>
     )
