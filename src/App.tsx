@@ -1,11 +1,8 @@
 import React from 'react'
 
-// React Element
-// const title = <h1>Hello React.js</h1>
-
 const List = () => {
     return (
-        <React.Fragment>
+        <>
             <ul>
                 <li>list item 1</li>
                 <li>list item 2</li>
@@ -21,17 +18,27 @@ const List = () => {
                 Deserunt laborum eos optio at voluptatum. Sint quasi alias quos
                 velit, suscipit necessitatibus vero. Facere, explicabo!
             </p>
-        </React.Fragment>
+        </>
     )
 }
 
+type TitleProps = {
+    title: string
+    text?: string
+}
+
 // React Component
-const Title = () => <h1>Hello React component</h1>
+const Title = (props: TitleProps) => (
+    <h1>
+        {props.text} {props.title}
+    </h1>
+)
 
 function App() {
     return (
         <div className="App">
-            <Title />
+            <Title title="App.js" />
+            <Title title="Test.js" />
             <List />
         </div>
     )
