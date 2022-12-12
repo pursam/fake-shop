@@ -5,11 +5,23 @@ import React from 'react'
 
 const List = () => {
     return (
-        <ul>
-            <li>list item 1</li>
-            <li>list item 2</li>
-            <li>list item 3</li>
-        </ul>
+        <React.Fragment>
+            <ul>
+                <li>list item 1</li>
+                <li>list item 2</li>
+                <li>list item 3</li>
+            </ul>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deserunt laborum eos optio at voluptatum. Sint quasi alias quos
+                velit, suscipit necessitatibus vero. Facere, explicabo!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deserunt laborum eos optio at voluptatum. Sint quasi alias quos
+                velit, suscipit necessitatibus vero. Facere, explicabo!
+            </p>
+        </React.Fragment>
     )
 }
 
@@ -20,7 +32,7 @@ function App() {
     return (
         <div className="App">
             <Title />
-            <List /> {10 + 5}
+            <List />
         </div>
     )
 }
