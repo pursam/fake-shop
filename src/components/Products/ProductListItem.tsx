@@ -3,7 +3,7 @@ import { Button } from '@mui/material'
 import { CardActions } from '@mui/material'
 import { Card } from '@mui/material'
 import React from 'react'
-import classes from './ProductListItem.module.css'
+import './ProductListItem.scss'
 
 type Props = {
     name: string
@@ -23,7 +23,7 @@ const ProductListItem = (props: Props) => {
                 <div>Capacity: {props.capacity} GB</div>
                 <div>price: {props.price}$</div>
             </CardContent>
-            <CardActions className={`${classes['btn-wrap']}`}>
+            <CardActions className="btn-wrap">
                 <Button variant="outlined">Add to cart</Button>
             </CardActions>
         </Card>
